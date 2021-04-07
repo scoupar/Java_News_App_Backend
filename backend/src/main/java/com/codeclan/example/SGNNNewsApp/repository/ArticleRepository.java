@@ -1,4 +1,9 @@
 package com.codeclan.example.SGNNNewsApp.repository;
 
-public interface ArticleRepository {
+import com.codeclan.example.SGNNNewsApp.model.Article;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ArticleRepository extends JpaRepository<Article, Long> {
 }
