@@ -1,10 +1,11 @@
 import './App.css';
+import React from 'react';
+import MainContainer from './containers/MainContainer';
 
 function App() {
   return (
     <div className="App">
-{/* {testing} */}
-{/* testing 2 */}
+      <MainContainer />
     </div>
   );
 }
