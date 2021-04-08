@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "journalist")
+@Table(name = "journalists")
 public class Journalist {
 
     @Id
@@ -57,5 +57,9 @@ public class Journalist {
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
+    }
+
+    public void addArticle(Article article) {
+        this.articles.add(article);
     }
 }

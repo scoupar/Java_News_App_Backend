@@ -12,7 +12,7 @@ public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="article-title")
+    @Column(name="article_title")
     private String articleTitle;
     @Column(name="body")
     private String body;
