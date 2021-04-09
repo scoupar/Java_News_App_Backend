@@ -3,6 +3,7 @@ package com.codeclan.example.SGNNNewsApp.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.awt.*;
 import java.time.LocalDate;
 
 @Entity
@@ -14,7 +15,7 @@ public class Article {
     private Long id;
     @Column(name="article_title")
     private String articleTitle;
-    @Column(name="body")
+    @Column(columnDefinition="longtext", name="body")
     private String body;
     @Column(name="date")
     private LocalDate date;
