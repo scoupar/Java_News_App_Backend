@@ -25,14 +25,17 @@ public class Article {
     private Journalist journalist;
     @Column(name="category")
     private Category category;
+    @Column(name="image")
+    private String image;
 
 
-    public Article(String articleTitle, String body, LocalDate date, Journalist journalist, Category category) {
+    public Article(String articleTitle, String body, LocalDate date, Journalist journalist, Category category, String image) {
         this.articleTitle = articleTitle;
         this.body = body;
         this.date = date;
         this.journalist = journalist;
         this.category = category;
+        this.image = image;
 
 
     }
@@ -86,5 +89,13 @@ public class Article {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
