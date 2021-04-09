@@ -26,16 +26,18 @@ public class JournalistController {
         return  new ResponseEntity<>(journalistRepository.findById(id),HttpStatus.OK);
     }
 
+
+
     @PostMapping(value = "/journalists")
     public ResponseEntity<Journalist> postJournalist(@RequestBody Journalist journalist){
         journalistRepository.save(journalist);
-        return new ResponseEntity<>(journalist,HttpStatus.CREATED);
+        return new ResponseEntity<>(journalist, HttpStatus.CREATED);
     }
 
     @PatchMapping(value = "/journalists/{id}")
     public ResponseEntity<Journalist> updateJournalist(@RequestBody Journalist journalist){
         journalistRepository.save(journalist);
-        return new ResponseEntity<>(journalist,HttpStatus.OK);
+        return new ResponseEntity<>(journalist, HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/journalists/{id}")
