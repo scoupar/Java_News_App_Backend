@@ -16,31 +16,31 @@ public class JournalistController {
     @Autowired
     JournalistRepository journalistRepository;
 
-    @GetMapping(value = "/journalists")
+    @GetMapping(value = "/admin/journalists")
     public ResponseEntity<List<Journalist>> getAllJournalists(){
         return  new ResponseEntity<>(journalistRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/journalists/{id}")
+    @GetMapping(value = "/admin/journalists/{id}")
     public ResponseEntity getJournalist(@PathVariable Long id){
         return  new ResponseEntity<>(journalistRepository.findById(id),HttpStatus.OK);
     }
 
 
 
-    @PostMapping(value = "/journalists")
+    @PostMapping(value = "/admin/journalists")
     public ResponseEntity<Journalist> postJournalist(@RequestBody Journalist journalist){
         journalistRepository.save(journalist);
         return new ResponseEntity<>(journalist, HttpStatus.CREATED);
     }
 
-    @PatchMapping(value = "/journalists/{id}")
+    @PatchMapping(value = "admin/journalists/{id}")
     public ResponseEntity<Journalist> updateJournalist(@RequestBody Journalist journalist){
         journalistRepository.save(journalist);
         return new ResponseEntity<>(journalist, HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/journalists/{id}")
+    @DeleteMapping(value = "admin/journalists/{id}")
     public ResponseEntity<Journalist> deleteJournalist(@PathVariable Long id) {
         Journalist found = journalistRepository.getOne(id);
         journalistRepository.delete(found);
