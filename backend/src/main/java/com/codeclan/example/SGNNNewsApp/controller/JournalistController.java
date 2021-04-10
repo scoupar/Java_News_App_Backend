@@ -34,13 +34,13 @@ public class JournalistController {
         return new ResponseEntity<>(journalist, HttpStatus.CREATED);
     }
 
-    @PatchMapping(value = "admin/journalists/{id}")
+    @PatchMapping(value = "/admin/journalists/{id}")
     public ResponseEntity<Journalist> updateJournalist(@RequestBody Journalist journalist){
         journalistRepository.save(journalist);
         return new ResponseEntity<>(journalist, HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "admin/journalists/{id}")
+    @DeleteMapping(value = "/admin/journalists/{id}")
     public ResponseEntity<Journalist> deleteJournalist(@PathVariable Long id) {
         Journalist found = journalistRepository.getOne(id);
         journalistRepository.delete(found);
