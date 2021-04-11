@@ -30,7 +30,7 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run (ApplicationArguments args) {
-        Journalist gregor = new Journalist("Gregor Simpson", "Crime reporter");
+        Journalist gregor = new Journalist("Gregor Simpson", "Chief reporter");
         journalistRepository.save(gregor);
         Journalist tina = new Journalist("Tina Houston", "Chief feature writer");
         journalistRepository.save(tina);
@@ -38,7 +38,7 @@ public class DataLoader implements ApplicationRunner {
         journalistRepository.save(scott);
         Journalist helen = new Journalist("Helen Aguda", "Politics editor");
         journalistRepository.save(helen);
-        Article article1 = new Article("Beckhams cash in despite fashion empire profits plunge", "David and Victoria Beckham’s business empire has paid out £38m to its owners despite a near 90% fall in profits prompted by difficulties at the former Spice Girl’s fashion label.\n" +
+        Article article1 = new Article("Beckhams cash in despite fashion empire profits plunge", "David and Victoria Beckham’s business empire paid out £38m to its owners despite a huge fall in profits.", "David and Victoria Beckham’s business empire has paid out £38m to its owners despite a near 90% fall in profits prompted by difficulties at the former Spice Girl’s fashion label.\n" +
                 "The former England footballer, the fashion entrepreneur and their business partner Simon Fuller paid themselves dividends of $21.5m (£16.7m) and £10.3m in May this year, on top of £11.1m in 2018, according to accounts for Beckham Brand Holdings (BBH) published at Companies House on Friday.\n" +
                 "The payouts were made despite a plunge in pre-tax profits to just £1.7m in the year to 31 December 2018 after turnover fell by 18% to £45.8m. Profits were hit by widening losses at Victoria Beckham’s fashion label and the sale of a 51% stake in Seven Global, which manages some of her husband’s corporate partnerships.\n" +
                 "Advertisement\n" +
@@ -55,7 +55,7 @@ public class DataLoader implements ApplicationRunner {
                 "He told the Business of Fashion trade journal that the brand’s prices were also a “real, real issue” and this year he slashed them by between 20% and 30%. “I firmly believe that our destiny is in our hands. We have a great talent in Victoria and, if you take that asset with a dream team, we can do it,” he added.\n" +
                 "This year Beckham launched her own makeup line. In 2017 she began a tie up with the sportswear firm Reebok.", LocalDate.of(2021, 3, 12), gregor, Category.News, "https://i.guim.co.uk/img/media/b2eaa2c900b45d602a93a6b5510e886d622f6cf7/0_375_4365_2619/master/4365.jpg?width=620&quality=85&auto=format&fit=max&s=8880a65df7db544be2b8e69a637991bb");
         articleRepository.save(article1);
-        Article article2 = new Article("Prince Philip: Scotland pays tribute to 'a remarkable man'", "Tributes have been paid in Scotland to the Duke of Edinburgh following his death at the age of 99.\n" +
+        Article article2 = new Article("Prince Philip: Scotland hails 'a remarkable man'", "Tributes have been paid in Scotland to the Duke of Edinburgh following his death aged 99.", "Tributes have been paid in Scotland to the Duke of Edinburgh following his death at the age of 99.\n" +
                 "Political leaders have sent their condolences to the royal family and parties have suspended their Scottish Parliament election campaigns.\n" +
                 "Presiding Officer Ken McIntosh said flags at Holyrood had been lowered as a mark of respect.\n" +
                 "The organisers of the Duke of Edinburgh Award scheme described him as \"a remarkable man\".\n" +
@@ -63,12 +63,12 @@ public class DataLoader implements ApplicationRunner {
                 "He attended Gordonstoun in Moray, and he and the Queen were regular visitors to the Balmoral estate in Royal Deeside for many decades.\n" +
                 "First Minister Nicola Sturgeon said Prince Philip, who became the Duke of Edinburgh in 1947, had \"deep and longstanding\" ties to Scotland.", LocalDate.of(2021, 3, 10), tina, Category.Entertainment, "https://ichef.bbci.co.uk/news/976/cpsprodpb/15C7A/production/_117901298_gettyimages-598902202-1.jpg");
         articleRepository.save(article2);
-        Article article3 = new Article("Celtic: Kennedy urges patience from fans about next manager appointment", "Celtic fans must be patient in waiting for the appointment of a new manager, says interim boss John Kennedy.\n" +
+        Article article3 = new Article("Celtic: Kennedy urges patience over new manager", "Fans urged to be patient as Parkhead chiefs continue search for new manager.","Celtic fans must be patient in waiting for the appointment of a new manager, says interim boss John Kennedy.\n" +
                "Eddie Howe has held advanced talks with the Parkhead side, but reports suggest he wants to wait until the summer before returning to the dugout.\n" +
                 "No terms have been agreed with the former Bournemouth manager.\n" +
                 "\"I know it's difficult without clarity. The club have to make the right decision for the greater good going forward,\" Kennedy said.", LocalDate.of(2021, 3, 12), scott, Category.Sports, "https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/A134/production/_117886214_20086268.jpg");
         articleRepository.save(article3);
-        Article article4 = new Article("Greensill lobbying row - Rishi Sunak texts to David Cameron released", "The Treasury has released two text messages sent by Rishi Sunak to David Cameron amid an ongoing lobbying row.\n" +
+        Article article4 = new Article("Greensill lobbying row - Rishi Sunak texts to David Cameron released", "Text messages sent by the chancellor to former PM David Cameron have been released by the Treasury amid a lobbying row.", "The Treasury has released two text messages sent by Rishi Sunak to David Cameron amid an ongoing lobbying row.\n" +
                "Mr Cameron sent messages to the chancellor's private phone last year to ask for help for finance firm Greensill Capital, where he worked as an adviser.\n" +
                 "The firm was run by Lex Greensill - a former unpaid adviser to the ex-PM during his time in No 10.\n" +
                 "The texts show Mr Sunak told Mr Cameron his request for access to government-backed loans was being examined.\n" +
