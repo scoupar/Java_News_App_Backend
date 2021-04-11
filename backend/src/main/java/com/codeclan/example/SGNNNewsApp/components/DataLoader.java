@@ -30,7 +30,7 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run (ApplicationArguments args) {
-        Journalist gregor = new Journalist("Gregor Simpson", "Crime reporter");
+        Journalist gregor = new Journalist("Gregor Simpson", "Chief reporter");
         journalistRepository.save(gregor);
         Journalist tina = new Journalist("Tina Houston", "Chief feature writer");
         journalistRepository.save(tina);
