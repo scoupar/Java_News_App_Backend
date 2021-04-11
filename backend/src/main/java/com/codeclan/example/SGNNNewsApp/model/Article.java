@@ -17,6 +17,8 @@ public class Article {
     private String articleTitle;
     @Column(columnDefinition="longtext", name="body")
     private String body;
+    @Column(name="intro")
+    private String intro;
     @Column(name="date")
     private LocalDate date;
     @JsonIgnoreProperties(value="articles")
@@ -29,8 +31,9 @@ public class Article {
     private String image;
 
 
-    public Article(String articleTitle, String body, LocalDate date, Journalist journalist, Category category, String image) {
+    public Article(String articleTitle, String intro, String body, LocalDate date, Journalist journalist, Category category, String image) {
         this.articleTitle = articleTitle;
+        this.intro = intro;
         this.body = body;
         this.date = date;
         this.journalist = journalist;
@@ -97,5 +100,13 @@ public class Article {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getIntro() {
+        return intro;
+    }
+
+    public void setIntro(String intro) {
+        this.intro = intro;
     }
 }
