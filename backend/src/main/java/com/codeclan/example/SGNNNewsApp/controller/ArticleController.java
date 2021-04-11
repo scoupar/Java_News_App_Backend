@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -23,7 +24,9 @@ public class ArticleController {
 
     @GetMapping(value = "/articles")
     public ResponseEntity<List<Article>> getAllArticles(){
-        return new ResponseEntity<>(articleRepository.findAll(), HttpStatus.OK);
+        List<Article> articleList = articleRepository.findAll();
+        Collections.sort(articleList, Article.ArticleDateComparator);
+        return new ResponseEntity<>(articleList, HttpStatus.OK);
     }
 
     @GetMapping(value = "/articles/journalist/name")

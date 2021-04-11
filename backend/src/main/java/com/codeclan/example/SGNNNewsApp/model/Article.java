@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import java.awt.*;
 import java.time.LocalDate;
+import java.util.Comparator;
 
 @Entity
 @Table(name = "articles")
@@ -109,4 +110,14 @@ public class Article {
     public void setIntro(String intro) {
         this.intro = intro;
     }
+
+    public static Comparator<Article> ArticleDateComparator = new Comparator<Article>() {
+        @Override
+        public int compare(Article article1, Article article2) {
+            // sorts by descending order of date i.e. newest date first
+            return article2.date.compareTo(article1.date);
+        }
+    };
+
 }
+// listOfArticles --> Collections.sort(listOfArticles, Article.ArticleDateComparator)
