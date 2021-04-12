@@ -32,6 +32,7 @@ public class ArticleController {
     @GetMapping(value = "/articles/journalist/name")
     public ResponseEntity<List<Article>> findArticleByJournalist(
             @RequestParam(name = "name") String name
+
     ){
         return new ResponseEntity<List<Article>>(articleRepository.findArticleByJournalistName(name), HttpStatus.OK);
     }
@@ -40,8 +41,12 @@ public class ArticleController {
     public ResponseEntity <List<Article>> findArticleByCategory(
             @RequestParam(name = "category") Category category
 
+
+
     ){
-        return new ResponseEntity<List<Article>>(articleRepository.findArticleByCategory(category), HttpStatus.OK);
+        List<Article> articleList = articleRepository.findArticleByCategory(category);
+        Collections.sort(articleList, Article.ArticleDateComparator);
+        return new ResponseEntity<List<Article>>(articleList, HttpStatus.OK);
 
     }
 
