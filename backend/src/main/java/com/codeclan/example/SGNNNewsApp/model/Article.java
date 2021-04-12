@@ -119,5 +119,12 @@ public class Article {
         }
     };
 
+
+//    public static  Comparator<Article> ArticleCategoryComparator = new Comparator<Article>() {
+//        @Override
+//        public int compare(Article article1, Article article2) {
+//            return article2.category.compareTo(article1.category);
+//        }
+//    };
 }
 // listOfArticles --> Collections.sort(listOfArticles, Article.ArticleDateComparator)
