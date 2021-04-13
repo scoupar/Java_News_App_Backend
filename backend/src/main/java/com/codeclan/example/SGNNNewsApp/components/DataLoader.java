@@ -30,13 +30,13 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run (ApplicationArguments args) {
-        Journalist gregor = new Journalist("Gregor Simpson", "Chief reporter");
+        Journalist gregor = new Journalist("Gregor Simpson", "Chief reporter", "https://media-exp1.licdn.com/dms/image/C5603AQGE3YxSi3cp4g/profile-displayphoto-shrink_800_800/0/1615389881236?e=1623888000&v=beta&t=yg-NakRphJ7Z3ZWDFEgf0OwNf1e7iW_r5OoREL8wPrw");
         journalistRepository.save(gregor);
-        Journalist tina = new Journalist("Tina Houston", "Chief feature writer");
+        Journalist tina = new Journalist("Tina Houston", "Chief feature writer", "https://media-exp1.licdn.com/dms/image/C4D03AQGSQdlPB_m3pA/profile-displayphoto-shrink_800_800/0/1603127181387?e=1623888000&v=beta&t=3JR3S4MJCUrDgzItBfDNQrPEXvz0xvYcBGDR7NJBSU8");
         journalistRepository.save(tina);
-        Journalist scott = new Journalist("Scott Coupar", "Chief sports writer");
+        Journalist scott = new Journalist("Scott Coupar", "Chief sports writer", "https://media-exp1.licdn.com/dms/image/C4E03AQEmD8EAG8BOEw/profile-displayphoto-shrink_800_800/0/1615221650315?e=1623888000&v=beta&t=nnDLr8yrt0QNCIs2oo0GcQ1z3jqnHEXKiTmP8sZ3Gcc");
         journalistRepository.save(scott);
-        Journalist helen = new Journalist("Helen Aguda", "Politics editor");
+        Journalist helen = new Journalist("Helen Aguda", "Politics editor", "https://media-exp1.licdn.com/dms/image/C4D03AQF5FDvhdYnUaQ/profile-displayphoto-shrink_800_800/0/1615368444673?e=1623888000&v=beta&t=Acn7HbUsnnqAyVMG3qyzYlsUK_QjWmPNqIHA10OtGUQ");
         journalistRepository.save(helen);
 
         Article article1 = new Article("Beckhams cash in despite fashion empire profits plunge", "David and Victoria Beckham’s business empire paid out £38m to its owners despite a huge fall in profits.", "David and Victoria Beckham’s business empire has paid out £38m to its owners despite a near 90% fall in profits prompted by difficulties at the former Spice Girl’s fashion label.\n" +

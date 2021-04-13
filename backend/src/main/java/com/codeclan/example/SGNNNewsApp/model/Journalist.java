@@ -17,11 +17,14 @@ public class Journalist {
     private String title;
     @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY)
     private List<Article> articles;
+    @Column(name ="image")
+    private String image;
 
-    public Journalist(String name, String title) {
+    public Journalist(String name, String title, String image) {
         this.name = name;
         this.title = title;
         this.articles = new ArrayList<>();
+        this.image = image;
     }
 
     public Journalist() {
@@ -61,5 +64,13 @@ public class Journalist {
 
     public void addArticle(Article article) {
         this.articles.add(article);
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
