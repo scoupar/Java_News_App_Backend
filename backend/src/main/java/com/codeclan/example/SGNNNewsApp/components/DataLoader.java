@@ -265,10 +265,10 @@ public class DataLoader implements ApplicationRunner {
         helen.addArticle(article12);
         journalistRepository.save(helen);
 
-        gregor.addArticle(article13);
-        journalistRepository.save(gregor);
-
-        tina.addArticle(article14);
-        journalistRepository.save(tina);
+//        gregor.addArticle(article13);
+//        journalistRepository.save(gregor);
+//
+//        tina.addArticle(article14);
+//        journalistRepository.save(tina);
     }
 }
