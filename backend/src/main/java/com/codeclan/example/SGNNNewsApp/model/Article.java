@@ -30,9 +30,19 @@ public class Article {
     private Category category;
     @Column(name="image")
     private String image;
+    @Column(name="number_of_clicks")
+    private Long numberOfClicks;
 
 
-    public Article(String articleTitle, String intro, String body, LocalDate date, Journalist journalist, Category category, String image) {
+//    @Column(name="click_count")
+//    private Long clickCount;
+
+
+
+
+
+
+    public Article(String articleTitle, String intro, String body, LocalDate date, Journalist journalist, Category category, String image, Long numberOfClicks) {
         this.articleTitle = articleTitle;
         this.intro = intro;
         this.body = body;
@@ -40,6 +50,8 @@ public class Article {
         this.journalist = journalist;
         this.category = category;
         this.image = image;
+        this.numberOfClicks = numberOfClicks;
+
 
 
     }
@@ -111,6 +123,19 @@ public class Article {
         this.intro = intro;
     }
 
+    public void incrementNumClicks() {
+        this.numberOfClicks += 1;
+    }
+
+//    public Long getClickCount() {
+//        return clickCount;
+//    }
+//
+//
+//    public void setClickCount(){
+//        this.clickCount += 1;
+//    }
+
     public static Comparator<Article> ArticleDateComparator = new Comparator<Article>() {
         @Override
         public int compare(Article article1, Article article2) {
@@ -120,11 +145,8 @@ public class Article {
     };
 
 
-//    public static  Comparator<Article> ArticleCategoryComparator = new Comparator<Article>() {
-//        @Override
-//        public int compare(Article article1, Article article2) {
-//            return article2.category.compareTo(article1.category);
-//        }
-//    };
+    public Long getNumberOfClicks() {
+        return numberOfClicks;
+    }
 }
 // listOfArticles --> Collections.sort(listOfArticles, Article.ArticleDateComparator)

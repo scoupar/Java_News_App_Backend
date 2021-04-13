@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ArticleController {
@@ -60,6 +61,11 @@ public class ArticleController {
 
     @GetMapping(value = "/articles/{id}")
     public ResponseEntity getArticle(@PathVariable Long id){
+        Optional<Article> clickedArticle = articleRepository.findById(id);
+        clickedArticle.ifPresent(article -> {
+            article.incrementNumClicks();
+            articleRepository.save(article);
+        });
         return new ResponseEntity<>(articleRepository.findById(id),HttpStatus.OK);
     }
 
