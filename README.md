@@ -8,7 +8,7 @@ https://github.com/scoupar/Java_News_App_Frontend
 
 # Video Demo: 
 
-Demo available at https://youtu.be/3CIGxUUhcpw
+Demo available at:  https://youtu.be/3CIGxUUhcpw
 
 # Brief: 
 
