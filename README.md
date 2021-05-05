@@ -6,6 +6,10 @@
 More detailed README and front-end code available at: 
 https://github.com/scoupar/Java_News_App_Frontend
 
+# Video Demo: 
+
+Demo available at https://youtu.be/3CIGxUUhcpw
+
 # Brief: 
 
 # SGNN News
