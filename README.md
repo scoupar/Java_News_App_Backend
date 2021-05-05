@@ -3,7 +3,8 @@
 
 # Front-End Code:
 
-https://github.com/TinaHouston/Java_News_App_Frontend
+More detailed README and front-end code available at: 
+https://github.com/scoupar/Java_News_App_Frontend
 
 # Brief: 
 
