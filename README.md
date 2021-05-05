@@ -1,6 +1,11 @@
-Link to frontend code : https://github.com/TinaHouston/Java_News_App_Frontend
+# CC News (Back-End)
 
 
+# Front-End Code:
+
+https://github.com/TinaHouston/Java_News_App_Frontend
+
+# Brief: 
 
 # SGNN News
 What's Goin' On News have asked you to build a web application to allow them to upload the latest Scottish news.
